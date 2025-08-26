@@ -17,16 +17,16 @@
 @if(Model.MostrarBotonEdicion)
     {
         <div class="d-flex gap-2">
-            <a class="btn btn-primary" asp-action="Editar" asp-route-id="@Model.Id">Editar entrada</a>
+            <a class="btn btn-primary" asp-action="Editar" asp-route-id="@Model.Id">Edit post</a>
             <form asp-action="Borrar" style="display: inline;">
                 <input type="hidden" name="Id" id="id" value="@Model.Id"/>
                 @if(Model.EntradaBorrada)
                 {
-                    <button class="btn btn-secondary" asp-action="Borrar" asp-route-borrado="false">Restaurar</button>
+                    <button class="btn btn-secondary" asp-action="Borrar" asp-route-borrado="false">Restore</button>
                 }
                 else
                 {
-                    <button class="btn btn-danger" asp-action="Borrar" asp-route-borrado="true">Borrar</button>
+                    <button class="btn btn-danger" asp-action="Borrar" asp-route-borrado="true">Delete</button>
                 }
             </form>
         </div>
@@ -47,7 +47,7 @@
 
 @if(Model.Comentarios.Any())
 {
-    <h2>Comentarios</h2>
+    <h2>Comments</h2>
 
     <div class="mb-4">
         @foreach(var comentario in Model.Comentarios)
@@ -62,7 +62,7 @@
                 {
                     <div class="mt-2">
                         <a class="btn btn-danger" asp-action="borrar" asp-controller="comentarios" 
-                        asp-route-id="@comentario.Id">Borrar Comentario</a>
+                        asp-route-id="@comentario.Id">Delete Comment</a>
                     </div>
                 }
             </div>
@@ -72,16 +72,16 @@
 
 
 
-<h2>Deja un comentario</h2>
+<h2>Leave a comment</h2>
 @if(User.Identity!.IsAuthenticated)
 {
     <form asp-action="comentar" asp-controller="comentarios">
         <input type="hidden" asp-for="Id" />
         <div style="max-width: 600px">
             <textarea id="cuerpo" name="cuerpo" required class="form-control" 
-            style="height: 100px" placeholder="Escribe un comentario..."></textarea>
+            style="height: 100px" placeholder="Write a comment..."></textarea>
             <div class="d-flex justify-content-end mt-2">
-                <button type="submit" class="btn btn-primary">Comenta</button>
+                <button type="submit" class="btn btn-primary">Comment</button>
             </div>
         </div>
 
@@ -89,7 +89,7 @@
     
 } else
 {
-    <p>Logueate para comentar <a asp-controller="usuarios" asp-action="login" asp-route-urlRetorno="@urlRetorno">Aquí</a></p>
+    <p>Log in to comment <a asp-controller="usuarios" asp-action="login" asp-route-urlRetorno="@urlRetorno">Here</a></p>
 }
 
 

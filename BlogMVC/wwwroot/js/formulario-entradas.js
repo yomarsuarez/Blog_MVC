@@ -6,7 +6,7 @@
             ['code-block'],
         ],
     },
-    placeholder: 'Coloque aquí la entrada...',
+    placeholder: 'Write your post here...',
     theme: 'snow', // or 'bubble'
 });
 
@@ -43,7 +43,7 @@ function validarCuerpo()
     const htmlCuerpo = quill.getSemanticHTML();
 
     if (htmlCuerpo === '<p></p>') {
-        mensajeError = "El cuerpo es requerido",
+        mensajeError = "Body is required",
         esValido = false;
     }
 
@@ -71,7 +71,7 @@ async function generarImagen() {
     const titulo = document.getElementById("Titulo").value;
 
     if (!titulo) {
-        alert("El título no puede estar vacio");
+        alert("Title cannot be empty.");
         return;
     }
 

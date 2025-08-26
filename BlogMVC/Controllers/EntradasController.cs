@@ -217,7 +217,7 @@ namespace BlogMVC.Controllers
             if (string.IsNullOrWhiteSpace(titulo))
             {
                 Response.StatusCode = StatusCodes.Status400BadRequest;
-                await Response.WriteAsync("Titulo no puede estar vacio.");
+                await Response.WriteAsync("Title cannot be empty.");
                 return;
             }
 
@@ -233,7 +233,7 @@ namespace BlogMVC.Controllers
         {
             if (string.IsNullOrWhiteSpace(titulo))
             {
-               return BadRequest("Titulo no puede estar vacio.");
+               return BadRequest("Title cannot be empty.");
             }
 
             //if(env.IsDevelopment())

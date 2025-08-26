@@ -4,35 +4,37 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Registro";
+    ViewData["Title"] = "Sign Up";
 }
 
-<h1>Regístrate</h1>
 
-<div class="card">
-    <div class="card-body">
-        <form asp-action="Registro">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="mb-3">
-                <label asp-for="Email" class="form-label"></label>
-                <input asp-for="Email" autocomplete="off" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Nombre" class="form-label"></label>
-                <input asp-for="Nombre" autocomplete="off" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Password" class="form-label"></label>
-                <input asp-for="Password" autocomplete="off" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-
-            <button class="btn-primary btn">Registrate</button>
-            <a class="btn btn-success" asp-action="login">Deseo Loguearme</a>
-
-        </form>
+<div class="d-flex justify-content-center align-items-center min-vh-100 py-5" style="background: #f3f0fa;">
+    <div class="card shadow login-card">
+        <div class="card-body">
+            <h2 class="text-center mb-4" style="color: #512bd4;">Sign Up</h2>
+            <form asp-action="Registro">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" autocomplete="off" class="form-control form-control-lg" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label"></label>
+                    <input asp-for="Nombre" autocomplete="off" class="form-control form-control-lg" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" autocomplete="off" class="form-control form-control-lg" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg" style="background-color: #512bd4; border-color: #512bd4;">Sign Up</button>
+                    <a class="btn btn-outline-primary btn-lg" asp-action="login" style="color: #512bd4; border-color: #512bd4;">Already have an account?</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 

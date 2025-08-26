@@ -100,7 +100,7 @@ namespace BlogMVC.Controllers
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Inicio de sesión inválido");
+                ModelState.AddModelError(string.Empty, "Login failed");
                 return View(modelo);
             }
         }

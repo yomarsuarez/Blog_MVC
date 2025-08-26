@@ -4,42 +4,52 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Log In";
 }
 
-<h1>Login</h1>
-
-@if(ViewData.Keys.Contains("mensaje"))
+@* @if(ViewData.Keys.Contains("mensaje"))
 {
     <p style="color:red;">@ViewData["mensaje"]</p>
-}
+} *@
 
 
-<div class="card">
-    <div class="card-body">
-        <form asp-action="Login">
-            <input type="hidden" asp-for="UrlRetorno", value="@ViewData["urlRetorno"]"/>
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="mb-3">
-                <label asp-for="Email" class="form-label"></label>
-                <input asp-for="Email" autocomplete="off" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Password" class="form-label"></label>
-                <input asp-for="Password" autocomplete="off" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" asp-for="Recuerdame" />
-                <label class="form-check-label" asp-for="Recuerdame"></label>
-            </div>
-            <button class="btn-primary btn">Login</button>
-            <a class="btn btn-success" asp-action="registro">Deseo Registrarme</a>
-        </form>
+<div class="d-flex justify-content-center align-items-center min-vh-100 py-5" style="background: #f3f0fa;">
+    <div class="card shadow login-card">
+        <div class="card-body">
+            <h2 class="text-center mb-4" style="color: #512bd4;">Log In</h2>
+            @if(ViewData.Keys.Contains("mensaje"))
+            {
+                <div class="alert alert-danger py-2 text-center" role="alert">
+                    @ViewData["mensaje"]
+                </div>
+            }
+            <form asp-action="Login">
+                <input type="hidden" asp-for="UrlRetorno" value="@ViewData["urlRetorno"]"/>
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" autocomplete="off" class="form-control form-control-lg" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" autocomplete="off" class="form-control form-control-lg" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" asp-for="Recuerdame" />
+                    <label class="form-check-label" asp-for="Recuerdame"></label>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg" style="background-color: #512bd4; border-color: #512bd4;">Log In</button>
+                    <a class="btn btn-outline-primary btn-lg" asp-action="registro" style="color: #512bd4; border-color: #512bd4;">Sign Up</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial"/>
-}              
+}           
+
