@@ -12,7 +12,7 @@ Este proyecto es una aplicación web tipo Blog construida con las siguientes tec
 
 Puedes acceder a la aplicación desde el siguiente enlace:
 
-👉 Blog MVC en Azure
+👉 Blog MVC en Azure: https://blogmvc20250827090134-ddd8evbmace7bwd6.canadaeast-01.azurewebsites.net/
 
 🔑 Acceso a la aplicación
 
