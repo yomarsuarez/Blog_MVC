@@ -31,7 +31,7 @@ Contraseña: aA123456!
 📝 Funcionalidades principales
 
 ✅ Registro e inicio de sesión de usuarios.
-✅ Creación, edición y eliminación de entradas del blog.
+✅ Creación, edición y eliminación de entradas del blog, puedes construir tu blog por ti mismo o con ayuda de IA.
 ✅ Sistema de comentarios en cada entrada.
 ✅ Asignación y administración de roles de usuario.
 ✅ Interfaz moderna construida con Blazor.
