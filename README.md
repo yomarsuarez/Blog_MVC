@@ -18,15 +18,15 @@ Puedes acceder a la aplicación desde el siguiente enlace:
 
 Tienes dos formas de ingresar:
 
-Registro de usuario propio
-
-Puedes crear tu cuenta desde la aplicación.
-
 Acceso rápido con credenciales de prueba
 
 Email: yomar@gmail.com
 
 Contraseña: aA123456!
+
+Registro de usuario propio
+
+Puedes crear tu cuenta desde la aplicación.
 
 📝 Funcionalidades principales
 
